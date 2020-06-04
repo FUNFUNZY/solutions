@@ -12,4 +12,4 @@ ModuleNotFoundError: No module named 'sklearn.mode_selection'
 
 解决方案：
 打开anaconda prompt ---> 命令：
-                            conda list --> conda update scikit-learn
+                         activate ---> conda list --> conda update scikit-learn
