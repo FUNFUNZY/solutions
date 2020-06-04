@@ -1,0 +1,15 @@
+问题描述：
+
+from sklearn.mode_selection import train_test_split
+
+报错详情：
+---------------------------------------------------------------------------
+ModuleNotFoundError                       Traceback (most recent call last)
+<ipython-input-95-15a13a06e355> in <module>()
+----> 1 from sklearn.mode_selection import train_test_split
+
+ModuleNotFoundError: No module named 'sklearn.mode_selection'
+
+解决方案：
+打开anaconda prompt ---> 命令：
+                            conda list --> conda update scikit-learn
