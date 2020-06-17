@@ -1,0 +1,22 @@
+（一）#问题描述：在pip install imbalanced_learn的时候报sklearn的error，有冲突。
+#分析：可能是依赖库的问题，使用python开发的过程中，工程一多，难免会碰到不同的工程依赖不同版本的库的问题；亦或者是在开发过程中不想让物理环境里充斥各种各样的库，引发未来的依赖灾难。此时，我们需要对于不同的工程使用不同的虚拟环境来保持开发环境以及系统环境的清洁。
+#解决：根本上问题找不到，所以直接创建虚拟环境
+#1.创建虚拟环境，安装并命名kernel并设置jupyter为新的kernel
+#2.按照numpy\scipy\matplotlib\scikit-learn的步骤安装
+#3.重新开启jupyter，再次安装imbalanced_learn，问题解决！
+
+
+
+（二）tensorflow版本问题
+#sess =tf.Session()   #报错，原因：版本为2.0不兼容1.0版本
+#sess = tf.compat.v1.Session() #报错raise RuntimeError('The Session graph is empty.  Add operations to the ' RuntimeError:
+#tf.compat.v1.disable_eager_execution()  #版本为2.0的tensorflow开启对话错误的解决方法         
+
+
+解决：
+改import tensorflow as tf 为以下：
+      import tensorflow.compat.v1 as tf
+      tf.disable_eager_execution()
+
+
+（三）
