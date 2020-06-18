@@ -17,6 +17,34 @@
 改import tensorflow as tf 为以下：
       import tensorflow.compat.v1 as tf
       tf.disable_eager_execution()
+或者：pip install tensorflow==1.15.3  (-->1.0的最新版本)
+
+（三）tensorflow导入mnist数据集失败
+报错：No module named 'tensorflow.examples.tutorials
+解决：
+1）tensorflow2.0：
+代码如下：
+import tensorflow as tf
+tf.__version__
+
+mint=tf.keras.datasets.mnist
+(x_,y_),(x_1,y_1)=mint.load_data()
 
 
-（三）
+import matplotlib.pyplot as plt
+plt.imshow(x_[0], cmap="binary")
+plt.show()
+
+2）tensorflow1.0
+进入本地Python文件夹的tensorflow_core\examples文件夹，查看有没有tutorials文件夹
+下载缺失的文件：https://github.com/tensorflow/tensorflow/tree/master/tensorflow/examples/tutorials
+（怎么下载？-->打开网址，登录自己的github账号，把repositories 'fork'到自己的repositories 中，点击右上角绿色框框的'clone..'->'DownloadZip'即可）
+
+在下载好的文件夹中找到tutorials文件夹，拷贝整个文件夹到本地Python文件夹的tensorflow_core\examples文件夹中，
+
+回到编辑器运行
+from tensorflow.examples.tutorials.mnist import input_data
+mnist = input_data.read_data_sets("MNIST_data", one_hot=True)
+问题解决
+
+（四）
