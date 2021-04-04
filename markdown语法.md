@@ -37,8 +37,9 @@
 图片title是图片的标题，当鼠标移到图片上时显示的内容。title可加可不加
 
 example：
-								 ![blockchain](https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/
-u=702257389,1274025419&fm=27&gp=0.jpg "区块链")
+
+	![blockchain](https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/
+	u=702257389,1274025419&fm=27&gp=0.jpg "区块链")
 
 6.超链接
 
@@ -75,6 +76,12 @@ title可加可不加
 
 example：
 
+	姓名|技能|排行
+	--|:--:|--:
+	刘备|哭|大哥
+	关羽|打|二哥
+	张飞|骂|三弟
+
 姓名|技能|排行
 --|:--:|--:
 刘备|哭|大哥
@@ -109,11 +116,15 @@ example：
 			&```
 
 12.换行
-<br>
+	
+	<br>
+	
 在一行的末尾添加两个或多个空格，然后按回车键,即可创建一个换行 (<br>)。
 
 13.段落
-<p></p>
+
+	<p></p>
+
 
 
 学习链接：https://www.jianshu.com/p/191d1e21f7ed
